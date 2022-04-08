@@ -1,0 +1,19 @@
+# Markdown Practice
+
+## Basic Syntax
+**CSE15L Lab Reports**
+*Kristin Ebuengan*
+> 4/8/2022
+---
+1. first
+2. second
+3. third
+---
+- 1st
+- 2nd
+- 3rd
+---
+`hello world`
+---
+[website]()
+![alt text]()
