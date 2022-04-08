@@ -3,7 +3,6 @@
 ## Basic Syntax
 ---
 **CSE15L Lab Reports**
-
 >*Kristin Ebuengan*
 > 4/8/2022
 
