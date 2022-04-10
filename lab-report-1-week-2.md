@@ -71,3 +71,7 @@ The command should look something similar to: `scp /Users/<Computer username>/.s
  Once it's copied, you should be able to log into your CS15L account without a password. 
 
 ### **Optimizing Remote Running**
+For better optimization, you can run multiple commands on one line. Use a semicolon (`;`) to seperate different commands locally, and add quotation marks (`" "`) under all of the commands and semicolons to separate them when running on the server.
+
+![alt text](multiple_commands.png)
+>the first command (`scp`) and the log in command (`ssh`) aren't in quotation marks because they're commands that run locally, but the rest of the commands (`ls`, `javac`, `java`) run through the server so the all of them are under the same quotations marks while being separated by semicolons.
