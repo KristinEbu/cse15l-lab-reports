@@ -47,7 +47,27 @@ Now that you've succesfully connected remotely to your CS15L account, try testin
 > an example of using some basic commands
 
 ### **Moving Files with *scp***
+You can move files from your local computer to the server and make them accessible from different devices by using the command *Secure Copy*.
+
+You use the command by typing `scp <file name> <CS15L username>@ieng.ucsd.edu:~/` when you're not logged into your CS15L account.
+
+this moves `<file name>` from your local computer to the CS15L server. After you run this command, you should be able to see `<file name>` in the list of files on your CS15L account when using the `ls` command.
+
+![alt text](scp.png)
+>before running the `scp` command, the file `MoveThisFile.java` wasn't listed when running `ls`, but after running the `scp` command, `MoveThisFile.java` is now seen when runnning `ls`.
 
 ### **Setting an SSH Key**
+Using our CS15L account requires to enter your password multiple times, so it'd be easier to create an SSH Key to replace entering a password.
+
+In the terminal, when you're not logged into your CS15L account, run the command: `ssh-keygen -t ed25519` then keep pressing `enter` until it stops asking questions. This creates a `.shh` directory and a file `id_rsa.pub` on your local computer.
+
+![alt text](keygen.png)
+>running the command will look something similar to this, but not exactly alike since I already had a previous SSH Key.
+
+You now need to create the `.shh` directory onto your CS15L account, by running the command: `mkdir .ssh` when you're logged in. Then you copy the `.shh` directory and `id_rsa.pub` file from your computer into the server by using `scp` when you're not logged in.
+
+The command should look something similar to: `scp /Users/<Computer username>/.ssh/id_rsa.pub <CS15L username>@ieng6.ucsd.edu:~/.ssh/authorized_keys`
+
+ Once it's copied, you should be able to log into your CS15L account without a password. 
 
 ### **Optimizing Remote Running**
