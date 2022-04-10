@@ -41,6 +41,10 @@ If you see something similar to *Cluster Status* after you log in, that's when y
 >an example of what a succesful login looks like
 
 ### **Trying Some Commands**
+Now that you've succesfully connected remotely to your CS15L account, try testing out different basic commands! Here's a guide to help you get started: [Basic Commands](https://www.hostinger.com/tutorials/ssh/basic-ssh-commands)
+
+![alt text](basic_commands.png)
+> an example of using some basic commands
 
 ### **Moving Files with *scp***
 
