@@ -22,7 +22,7 @@ To accomplish this, go to the website: [https://sdacs.ucsd.edu/~icc/index.php](h
 >the *Account Lookup* screen
 
 
-After logging in, you'll be able to see your assigned CS15L account, as well as click the button that says change password.
+After logging in, you'll be able to see your assigned CS15L account, as well as the link that says "change your password."
 ![alt text](change_password.png)
 >you can see your CS15L account under *Additional Accounts* and can change your password by cliking on the link circled in red
 
@@ -33,7 +33,7 @@ Now with your new password, you'll be able to connect remotely! Firstly, open a 
 
 Then use the *Secure Shell* command to log in to your CS15L account by typing: `ssh <CS15L username>@ieng6.ucsd.edu` into the terminal and put in your password
 
-*WARNING*: you won't be able to see your password being typed, it'll appear as if you're typing nothing
+*WARNING*: you won't be able to see your password being typed; it'll appear as if you're typing nothing
 
 If you see something similar to *Cluster Status* after you log in, that's when you know you succesfully connected remotely!
 
@@ -57,14 +57,14 @@ this moves `<file name>` from your local computer to the CS15L server. After you
 >before running the `scp` command, the file `MoveThisFile.java` wasn't listed when running `ls`, but after running the `scp` command, `MoveThisFile.java` is now seen when runnning `ls`.
 
 ### **Setting an SSH Key**
-Using our CS15L account requires to enter your password multiple times, so it'd be easier to create an SSH Key to replace entering a password.
+Using the CS15L accounts requires entering your password multiple times, which is quite the hassle, so instead, it'd be easier to create an SSH Key to replace entering a password.
 
-In the terminal, when you're not logged into your CS15L account, run the command: `ssh-keygen -t ed25519` then keep pressing `enter` until it stops asking questions. This creates a `.shh` directory and a file `id_rsa.pub` on your local computer.
+In the terminal, when you're not logged into your CS15L account, run the command: `ssh-keygen -t ed25519` then keep pressing *enter* until it stops asking questions. This creates a `.shh` directory and a file `id_rsa.pub` on your local computer.
 
 ![alt text](keygen.png)
 >running the command will look something similar to this, but not exactly alike since I already had a previous SSH Key.
 
-You now need to create the `.shh` directory onto your CS15L account, by running the command: `mkdir .ssh` when you're logged in. Then you copy the `.shh` directory and `id_rsa.pub` file from your computer into the server by using `scp` when you're not logged in.
+You now need to create the `.shh` directory on your CS15L account, by running the command: `mkdir .ssh` when you're logged in. Then you copy the `.shh` directory and `id_rsa.pub` file from your computer into the server by using `scp` when you're not logged in.
 
 The command should look something similar to: `scp /Users/<Computer username>/.ssh/id_rsa.pub <CS15L username>@ieng6.ucsd.edu:~/.ssh/authorized_keys`
 
