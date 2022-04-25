@@ -1,4 +1,5 @@
 # CSE15L Lab Reports
 
 >[Markdown Practice](https://kristinebu.github.io/cse15l-lab-reports/MarkdownPractice.html) --
->[Lab Report 1](https://kristinebu.github.io/cse15l-lab-reports/lab-report-1-week-2.html)
+>[Lab Report 1](https://kristinebu.github.io/cse15l-lab-reports/lab-report-1-week-2.html) --
+>[Lab Report 2](https://kristinebu.github.io/cse15l-lab-reports/lab-report-2-week-4.html)
