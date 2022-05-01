@@ -15,7 +15,7 @@
  The failure-inducing input file did not include parenthesis in the input we wanted to test, therefore, the value of `closeParen` became `-1` as `")"` couldn't be found in the code. Because of this, we couldn't use the substring method correctly (as `-1` is not a proper index) and caused a "crashing" symptom being error exception `IndexOutOfBounds`. The exception (`IndexOutOfBounds`) itself was the bug in this code. I fixed this by making a substring without looking for parenthesis and just starting the link itself.
 
 
- ### **Code Change #2**
+### **Code Change #2**
 ![alt text](code_change_2_(LR2).png)
 >Code changes/edits to the previous code from "Code Change #1"
 
@@ -29,7 +29,7 @@
 The failure-inducing input file contained a second line that wasn't a link, however, it was still included in the output. This caused the "wrong answer" symptom we could see in the output. The "wrong answer" symptom helped me identify the bug, which was the line `int endLink = markdown.length() - 1;`. This line made the substring method include everything in the file, including new lines. I fixed this by identifying new lines and making sure it substrings by each line.
 
 
- ### **Code Change #3**
+### **Code Change #3**
 ![alt text](code_change_3_(LR2).png)
 >Code changes/edits to the previous code from "Code Change #2"
 
